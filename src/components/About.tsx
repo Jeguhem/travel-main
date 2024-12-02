@@ -2,6 +2,7 @@ import React from "react";
 import bestwaytotravel from "../../public/images/best-way-to-travel.svg";
 import Image from "next/image";
 import CountryCard from "./CountryCard";
+import { ScaleFadeText } from "./animations/animate";
 
 const CanadaCountryObject = {
   imageLink: "/images/canada.svg",
@@ -47,15 +48,17 @@ function About() {
           </div>
         </div>
 
-        <div className="p-5 border border-[#003C82] rounded-[20px]">
-          <Image
-            src={bestwaytotravel}
-            alt=""
-            width={426}
-            height={481}
-            className="hover:scale-110 hover:duration-300 hover:transition-transform hover:ease-in-out"
-          />
-        </div>
+        <ScaleFadeText>
+          <div className="p-5 border border-[#003C82] rounded-[20px]">
+            <Image
+              src={bestwaytotravel}
+              alt=""
+              width={426}
+              height={481}
+              className="hover:scale-110 hover:duration-300 hover:transition-transform hover:ease-in-out"
+            />
+          </div>
+        </ScaleFadeText>
       </div>
 
       <div className="flex flex-col lg:flex-row lg:pl-[120px] relative items-end lg:mt-[100px] mt-[60px] gap-[40px] lg:gap-[120px] justify-between">

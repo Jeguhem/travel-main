@@ -1,9 +1,10 @@
 import React from "react";
 import hamburger from "../../public/images/hamburger.svg";
 import Image from "next/image";
+import { SlideInText } from "./animations/animate";
 function NavBar() {
   return (
-    <div>
+    <SlideInText>
       <div className="hidden lg:flex justify-between items-center text-white">
         <p className="text-[24px] font-bold">Turistoe</p>
         <div className="flex border font-semibold rounded-3xl  px-2 border-white ">
@@ -28,7 +29,7 @@ function NavBar() {
           <Image src={hamburger} alt="" width={20} height={14} />
         </div>
       </div>
-    </div>
+    </SlideInText>
   );
 }
 

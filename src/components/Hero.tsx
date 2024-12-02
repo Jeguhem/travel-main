@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Image from "next/image";
 import search from "../../public/images/search.svg";
-// import { Calendar } from "./ui/calendar";
-// import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ScaleFadeText, SlideInText, SlideUpText } from "./animations/animate";
 
 function Hero() {
   const [showCalender, setShowCalender] = useState(false);
@@ -21,13 +20,19 @@ function Hero() {
     >
       <NavBar />
       <div className="flex flex-col items-center mt-[30px]">
-        <div className="max-w-[1000px] text-center text-white">
-          <h1 className=" leading-snug tracking-tight  animate__animated animate__fadeInUp">
+        <SlideUpText
+          delay={0}
+          className="max-w-[1000px] text-center text-white"
+        >
+          <h1 className=" leading-snug tracking-tight  ">
             Explore Our Delightful World
           </h1>
-        </div>
+        </SlideUpText>
 
-        <div className="flex flex-col lg:flex-row gap-6 items-center mt-[20px] ">
+        <ScaleFadeText
+          delay={0.5}
+          className="flex flex-col lg:flex-row gap-6 items-center mt-[20px] "
+        >
           <div className="rounded-[50px] h-[48px] items-center bg-white justify-between w-full flex lg:gap-[60px] ">
             <div className="flex px-6">
               <input
@@ -71,7 +76,7 @@ function Hero() {
               <div></div>
             )}
           </div>
-        </div>
+        </ScaleFadeText>
       </div>
     </div>
   );
