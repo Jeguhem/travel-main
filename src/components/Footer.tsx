@@ -4,6 +4,7 @@ import instagram from "../../public/images/instagram.svg";
 import twitter from "../../public/images/twitter.svg";
 import youtube from "../../public/images/youtube.svg";
 import Image from "next/image";
+import { SlideInText } from "./animations/animate";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
       <footer className="bg-[#003C82] text-white py-12">
         <div className="container mx-auto px-4 flex-col lg:flex-row flex gap-5 justify-between">
           {/* Turistoe */}
-          <div className="lg:border rounded-2xl p-3 w-full lg:max-w-[300px]">
+          <SlideInText  className="lg:border rounded-2xl p-3 w-full lg:max-w-[300px]">
             <h4 className="font-bold">Turistoe</h4>
             <div className="border-t mb-4 "></div>
             <p>
@@ -39,10 +40,10 @@ const Footer = () => {
                 <Image src={twitter} alt="" width={20} height={20} />
               </div>
             </div>
-          </div>
+          </SlideInText>
 
           {/* Take a trip with us */}
-          <div className="lg:border p-3 rounded-2xl ">
+          <SlideInText delay={0.1} className="lg:border p-3 rounded-2xl ">
             <h4 className="font-bold">Take a trip with us</h4>
             <div className="border-t mb-4 "></div>
 
@@ -60,10 +61,10 @@ const Footer = () => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </SlideInText>
 
           {/* About */}
-          <div className="lg:border rounded-2xl p-4 w-full lg:w-fit lg:min-w-[200px]">
+          <SlideInText delay={0.2} className="lg:border rounded-2xl p-4 w-full lg:w-fit lg:min-w-[200px]">
             <h4 className="font-bold ">About</h4>
             <div className="border-t mb-4 "></div>
             <ul className="space-y-2 list-disc pl-7">
@@ -88,10 +89,10 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </SlideInText>
 
           {/* Support */}
-          <div className="lg:border p-3 rounded-2xl">
+          <SlideInText delay={0.3} className="lg:border p-3 rounded-2xl">
             <h4 className="font-medium ">Support</h4>
             <div className="border-t mb-4 "></div>
             <ul className="space-y-2 list-disc pl-7">
@@ -111,7 +112,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </SlideInText>
         </div>
         <div className="w-full flex items-end justify-center mt-10">
           {" "}

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ScaleFadeText } from "./animations/animate";
 
 const reviews = [
   {
@@ -33,10 +34,10 @@ function Testimonials() {
     <div>
       <div className="flex flex-col items-center gap-5 bg-[#0B4386] py-[60px] text-white">
         {/* Section Title */}
-        <h2 className="">Our Happy Clients</h2>
+        <ScaleFadeText><h2 className="">Our Happy Clients</h2></ScaleFadeText>
       </div>
       {/* Carousel */}
-      <div className="flex gap-5 px-5 my-12 justify-center overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+      <ScaleFadeText className="flex gap-5 px-5 my-12 justify-center overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
         {reviews.map((review, index) => (
           <div
             key={index}
@@ -62,7 +63,7 @@ function Testimonials() {
             {/* Client Review */}
           </div>
         ))}
-      </div>
+      </ScaleFadeText>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import bestwaytotravel from "../../public/images/best-way-to-travel.svg";
 import Image from "next/image";
 import CountryCard from "./CountryCard";
-import { ScaleFadeText } from "./animations/animate";
+import { ScaleFadeText, SlideDownText, SlideInText, SlideUpText } from "./animations/animate";
 
 const CanadaCountryObject = {
   imageLink: "/images/canada.svg",
@@ -27,8 +27,8 @@ function About() {
     <div className="py-[80px] lg:py-[120px] flex flex-col gap-[80px] lg:gap-[120px] ">
       <div className=" px-[60px] lg:px-[120px] flex lg:flex-row flex-col justify-between ">
         <div className="max-w-[500px]">
-          <h2>Best Way To Travel</h2>
-          <div className="flex flex-col gap-[20px] my-[50px]">
+          <SlideUpText delay={0.2}><h2>Best Way To Travel</h2></SlideUpText>
+          <SlideUpText delay={0.4} className="flex flex-col gap-[20px] my-[50px]">
             <p>
               We are a travel agency that specializes in creating customized
               travel experiences for our clients. We believe that travel is a
@@ -41,14 +41,14 @@ function About() {
               deep understanding of different cultures and destinations, and we
               can help you plan the perfect trip for your needs and interests.
             </p>
-          </div>
+          </SlideUpText>
           <div className="flex gap-[80px]">
-            <h4 className="max-w-[50px]">1000+ Clinets</h4>
-            <h4 className="max-w-[50px]">500+ Trips</h4>
+            <ScaleFadeText delay={0.7}><h4 className="max-w-[50px]">1000+ Clinets</h4></ScaleFadeText>
+            <ScaleFadeText delay={1}><h4 className="max-w-[50px]">500+ Trips</h4></ScaleFadeText>
           </div>
         </div>
 
-        <ScaleFadeText>
+        <ScaleFadeText delay={0.8} >
           <div className="p-5 border border-[#003C82] rounded-[20px]">
             <Image
               src={bestwaytotravel}
@@ -63,8 +63,8 @@ function About() {
 
       <div className="flex flex-col lg:flex-row lg:pl-[120px] relative items-end lg:mt-[100px] mt-[60px] gap-[40px] lg:gap-[120px] justify-between">
         <div className="w-[400px]">
-          <h2>Ultimate Travel Experience</h2>
-          <div className=" my-[50px]">
+          <ScaleFadeText delay={0.5}><h2>Ultimate Travel Experience</h2></ScaleFadeText>
+          <SlideUpText delay={0.7} className=" my-[50px]">
             <p>
               We offer a wide range of services, including flight booking, hotel
               booking, car rental, visa assistance, insurance, and tours and
@@ -73,21 +73,21 @@ function About() {
               customized solutions for our clients that can be adapted to their
               specific needs and budget.
             </p>
-          </div>
+          </SlideUpText>
         </div>
 
         {/* Carousel Section */}
         <div className="">
-          <div className="hidden lg:flex absolute right-0 bottom-0 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+          <SlideInText delay={0.5} className="hidden lg:flex absolute right-0 bottom-0 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
             <div className="flex gap-3">
               {/* Card 1 */}
               <CountryCard {...CanadaCountryObject} />
               <CountryCard {...ChinaCountryObject} />
               <CountryCard {...ItalyCountryObject} />
             </div>
-          </div>
+          </SlideInText>
 
-          <div className="lg:hidden flex overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 space-x-3">
+          <ScaleFadeText delay={0.5} className="lg:hidden flex overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 space-x-3">
             <div className="flex">
               {/* Card 1 */}
               <div className="flex-shrink-0">
@@ -100,16 +100,16 @@ function About() {
                 <CountryCard {...ItalyCountryObject} />
               </div>
             </div>
-          </div>
+          </ScaleFadeText>
         </div>
       </div>
 
       <div className="flex flex-col items-center">
         <div className="bg-[#0B4386] text-white w-full py-[60px]">
-          <h2 className="text-center">Travel Memories</h2>
+          <ScaleFadeText><h2 className="text-center">Travel Memories</h2></ScaleFadeText>
         </div>
         <div className=" hidden lg:flex text-white gap-4 mt-[50px] px-[120px] ">
-          <div className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
+          <SlideInText delay={0.2} className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
             <div
               className="lg:w-[200px] rounded-2xl p-[10px] flex items-end  h-[450px] hover:scale-110 hover:transition-shadow duration-200"
               style={{
@@ -125,10 +125,10 @@ function About() {
                 </ul>
               </div>
             </div>
-          </div>
+          </SlideInText>
 
           <div className="flex flex-col gap-4">
-            <div className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
+            <SlideDownText delay={0.2} className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
               <div
                 className="w-[500px] p-[10px] flex items-end rounded-2xl h-[200px] hover:scale-110 hover:transition-shadow duration-200"
                 style={{
@@ -144,9 +144,9 @@ function About() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </SlideDownText>
             <div className="flex gap-3">
-              <div className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
+              <SlideUpText delay={0.2} className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
                 <div
                   className="w-[230px] p-[10px] flex items-end rounded-2xl h-[200px] hover:scale-110 hover:transition-shadow duration-200"
                   style={{
@@ -162,8 +162,8 @@ function About() {
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
+              </SlideUpText>
+              <SlideUpText delay={0.2} className=" border border-[#003C82] p-3 rounded-3xl border-dashed">
                 <div
                   className="w-[230px] p-[10px] flex items-end rounded-2xl h-[200px] hover:scale-110 hover:transition-shadow duration-200"
                   style={{
@@ -179,13 +179,14 @@ function About() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </SlideUpText>
             </div>
           </div>
         </div>
 
         {/* mobile */}
         <div className=" lg:hidden flex flex-col text-white gap-4 mt-[50px] px-5 ">
+          <ScaleFadeText>
           <div
             className="w-[353px] h-[327px] p-[10px] flex items-end rounded-2xl "
             style={{
@@ -201,6 +202,8 @@ function About() {
               </ul>
             </div>
           </div>
+          </ScaleFadeText>
+          <ScaleFadeText>
           <div
             className="w-[353px] h-[327px] p-[10px] flex items-end rounded-2xl  "
             style={{
@@ -216,6 +219,8 @@ function About() {
               </ul>
             </div>
           </div>
+          </ScaleFadeText>
+          <ScaleFadeText>
           <div
             className="w-[353px] h-[327px] p-[10px] flex items-end rounded-2xl "
             style={{
@@ -230,7 +235,9 @@ function About() {
                 <li className="text-[12px] ">80 travellers</li>
               </ul>
             </div>
-          </div>{" "}
+          </div>
+          </ScaleFadeText>
+          <ScaleFadeText>
           <div
             className="w-[353px] h-[327px] p-[10px] flex items-end rounded-2xl "
             style={{
@@ -246,6 +253,7 @@ function About() {
               </ul>
             </div>
           </div>
+          </ScaleFadeText>
         </div>
       </div>
     </div>
