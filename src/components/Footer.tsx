@@ -50,7 +50,7 @@ const Footer = () => {
               Subscribe to be the first to know about our new deals and get
               exclusive offers.
             </p>
-            <div className="pt-4 border-t flex jus rounded-3xl p-1 bg-white">
+            <div className="mt-4 flex jus rounded-3xl p-1 bg-white">
               <input
                 type="email"
                 placeholder="Enter your email address"
