@@ -1,4 +1,9 @@
 import React from "react";
+import facebook from "../../public/images/facebook.svg";
+import instagram from "../../public/images/instagram.svg";
+import twitter from "../../public/images/twitter.svg";
+import youtube from "../../public/images/youtube.svg";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -14,35 +19,38 @@ const Footer = () => {
         <div className="container mx-auto px-4 flex-col lg:flex-row flex gap-5 justify-between">
           {/* Turistoe */}
           <div className="lg:border rounded-2xl p-3 w-full lg:max-w-[300px]">
-            <h4 className="font-bold mb-4">Turistoe</h4>
+            <h4 className="font-bold">Turistoe</h4>
+            <div className="border-t mb-4 "></div>
             <p>
               We create unforgettable travel experiences that you'll cherish
               forever.
             </p>
-            <div className="flex space-x-4 mt-4">
-              <a href="#" className="hover:text-gray-300">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="hover:text-gray-300">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="hover:text-gray-300">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" className="hover:text-gray-300">
-                <i className="fab fa-twitter"></i>
-              </a>
+            <div className="flex  space-x-4 pt-4">
+              <div className=" rounded-full w-[40px] border  h-[40px] flex items-center justify-center ">
+                <Image src={instagram} alt="" width={20} height={20} />
+              </div>
+              <div className=" rounded-full w-[40px] border  h-[40px] flex items-center justify-center ">
+                <Image src={facebook} alt="" width={20} height={20} />
+              </div>
+              <div className=" rounded-full w-[40px] border  h-[40px] flex items-center justify-center ">
+                <Image src={youtube} alt="" width={20} height={20} />
+              </div>
+              <div className=" rounded-full w-[40px] border  h-[40px] flex items-center justify-center ">
+                <Image src={twitter} alt="" width={20} height={20} />
+              </div>
             </div>
           </div>
 
           {/* Take a trip with us */}
           <div className="lg:border p-3 rounded-2xl ">
-            <h4 className="font-bold mb-4">Take a trip with us</h4>
+            <h4 className="font-bold">Take a trip with us</h4>
+            <div className="border-t mb-4 "></div>
+
             <p>
               Subscribe to be the first to know about our new deals and get
               exclusive offers.
             </p>
-            <div className="mt-4 flex jus rounded-3xl p-1 bg-white">
+            <div className="pt-4 border-t flex jus rounded-3xl p-1 bg-white">
               <input
                 type="email"
                 placeholder="Enter your email address"
@@ -56,7 +64,8 @@ const Footer = () => {
 
           {/* About */}
           <div className="lg:border rounded-2xl p-4 w-full lg:w-fit lg:min-w-[200px]">
-            <h4 className="font-bold mb-4">About</h4>
+            <h4 className="font-bold ">About</h4>
+            <div className="border-t mb-4 "></div>
             <ul className="space-y-2 list-disc pl-7">
               <li>
                 <a href="#" className="hover:text-gray-300">
@@ -83,7 +92,8 @@ const Footer = () => {
 
           {/* Support */}
           <div className="lg:border p-3 rounded-2xl">
-            <h4 className="font-medium mb-4 ">Support</h4>
+            <h4 className="font-medium ">Support</h4>
+            <div className="border-t mb-4 "></div>
             <ul className="space-y-2 list-disc pl-7">
               <li>
                 <a href="#" className="hover:text-gray-300">
