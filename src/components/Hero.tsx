@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Image from "next/image";
 import search from "../../public/images/search.svg";
-import { Calendar } from "./ui/calendar";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// import { Calendar } from "./ui/calendar";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function Hero() {
   const [showCalender, setShowCalender] = useState(false);
@@ -49,25 +49,26 @@ function Hero() {
             </p>{" "}
             {/* <Image src={chevrondown} alt="chevron down" /> */}
             {showCalender && (
-              <div className="absolute bg-white rounded-xl border mt-[40px] ml-[-30px] lg:ml-[-50px] ">
-                <Calendar
-                  components={{
-                    IconLeft: (props) => (
-                      <ChevronLeft
-                        {...props}
-                        className="h-6 w-6 text-primary"
-                      />
-                    ),
-                    IconRight: (props) => (
-                      <ChevronRight
-                        {...props}
-                        className="h-6 w-6 text-primary "
-                      />
-                    ),
-                  }}
-                  showOutsideDays={true}
-                />
-              </div>
+              // <div className="absolute bg-white rounded-xl border mt-[40px] ml-[-30px] lg:ml-[-50px] ">
+              //   <Calendar
+              //     components={{
+              //       IconLeft: (props) => (
+              //         <ChevronLeft
+              //           {...props}
+              //           className="h-6 w-6 text-primary"
+              //         />
+              //       ),
+              //       IconRight: (props) => (
+              //         <ChevronRight
+              //           {...props}
+              //           className="h-6 w-6 text-primary "
+              //         />
+              //       ),
+              //     }}
+              //     showOutsideDays={true}
+              //   />
+              // </div>
+              <div></div>
             )}
           </div>
         </div>
