@@ -22,8 +22,8 @@ const Footer = () => {
             <h4 className="font-bold">Turistoe</h4>
             <div className="border-t mb-4 "></div>
             <p>
-              We create unforgettable travel experiences that you'll cherish
-              forever.
+              We create unforgettable travel experiences that you&apos;ll
+              cherish forever.
             </p>
             <div className="flex  space-x-4 pt-4">
               <div className=" rounded-full w-[40px] border  h-[40px] flex items-center justify-center ">
