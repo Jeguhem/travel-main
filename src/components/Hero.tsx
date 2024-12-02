@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import NavBar from "./NavBar";
-import chevrondown from "../../public/images/chevron-down.svg";
 import Image from "next/image";
 import search from "../../public/images/search.svg";
 import { Calendar } from "./ui/calendar";

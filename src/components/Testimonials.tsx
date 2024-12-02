@@ -1,11 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Carousel,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const reviews = [
   {
